@@ -17,7 +17,7 @@ hpc$DateTime <- as.POSIXct(paste(hpc$Date, hpc$Time), format="%d/%m/%Y %H:%M:%S"
 ## subset the data to the 2 mentioned days
 hpc <- subset(hpc, DateTime >= "2007/02/01 00:00:00" & DateTime <= "2007/02/02 23:59:59")
 
-png("plot3.png", width=480, height=480, bg="transparent")
+png("plot3.png", width=480, height=480)
 with(hpc, plot(DateTime, Sub_metering_1, type='n', xlab="", ylab="Energy sub metering"))
 lines(hpc$DateTime, hpc$Sub_metering_1)
 lines(hpc$DateTime, hpc$Sub_metering_2, col="red")

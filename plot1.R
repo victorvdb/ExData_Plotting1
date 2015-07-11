@@ -18,7 +18,7 @@ hpc$DateTime <- as.POSIXct(paste(hpc$Date, hpc$Time), format="%d/%m/%Y %H:%M:%S"
 hpc <- subset(hpc, DateTime >= "2007/02/01 00:00:00" & DateTime <= "2007/02/02 23:59:59")
 
 
-png("plot1.png", width=480, height=480, units="px", bg="transparent")
+png("plot1.png", width=480, height=480, units="px")
 hist(hpc$Global_active_power, 
         col="red", 
         main="Global Active Power",
